@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import './App.css'
 import { Login } from './components/Login'
 import { TwitterCard } from './components/TwitterCard';

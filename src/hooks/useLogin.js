@@ -32,7 +32,6 @@ export const useLogin = () => {
             return
         }
         setLogin(!login)
-        console.log('Se ha logueado correctamente')
     }
 
     return { error, handleSubmit }

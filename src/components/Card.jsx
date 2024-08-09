@@ -2,14 +2,11 @@ import { useCard } from "../hooks/useCard"
 
 export const Card = ({ children, userName, initialIsFollowing }) => {
 
-    const {isFollowing, setIsFollowing, text, buttonClassName} = useCard(initialIsFollowing)
-
-    const handleFollow = () => {
-        setIsFollowing(!isFollowing)
-    }
-
+    const { handleFollow, buttonClassName, text } = useCard({ initialIsFollowing })
+    
     return (
         <article className="tw-card">
+
             <header className="tw-card-header">
                 <img 
                     className="tw-card-avatar"
