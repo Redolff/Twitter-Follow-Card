@@ -1,20 +1,21 @@
+import { useContext, useState } from 'react';
 import './App.css'
+import { Login } from './components/Login'
 import { TwitterCard } from './components/TwitterCard';
+import { LoginContext } from './context/LoginProvider';
 
 const App = () => {
+    const { login } = useContext(LoginContext)
 
     return (
-        <section className='App'>
-            <TwitterCard userName='BiciGoga' initialIsFollowing>
-                Goga Ruiz-Sandoval
-            </TwitterCard>
-            <TwitterCard userName='juampiramos9' initialIsFollowing>
-                Juan Pablo Ramos
-            </TwitterCard>
-            <TwitterCard userName='MalditosNerdsVX' initialIsFollowing>
-                Malditos Nerds
-            </TwitterCard>
-        </section>
+        <main>
+            <h1> Twitter Ui </h1>
+            {
+                login 
+                ? <TwitterCard />
+                : <Login />
+            }
+        </main>
     )
 }
 

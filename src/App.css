@@ -1,3 +1,20 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main h1{
+    color: #fff;
+}
+
+.twitter-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 .tw-card{
     display: flex;
     align-items: center;
