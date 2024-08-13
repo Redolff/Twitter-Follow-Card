@@ -1,0 +1,18 @@
+.posteos {
+    display: flex;
+    flex-direction: column;
+}
+
+.posteos ul{
+    list-style: none;
+}
+
+.posteos ul li h3{
+    display: flex;
+    color: #fff;
+    text-align: start; 
+}
+
+.posteos ul li p{
+    color: #fff;
+}

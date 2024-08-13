@@ -1,29 +1,12 @@
-import { useEffect, useState } from "react"
+import '../styles/Posteo.css'
+import { usePosteo } from '../hooks/usePosteo'
 
 export const Posteo = () => {
-    const [posteos, setPosteos] = useState([])
-
-    useEffect(() => {
-        const API = 'https://jsonplaceholder.typicode.com/posts'
-        const fetchData = async() => {
-            try{
-                const response = await fetch(API)
-                if(!response.ok){
-                    throw new Error('Error fetching data')
-                }
-                const data = await response.json()
-                setPosteos(data)
-            }
-            catch(error){
-                throw new Error(error.message)
-            }
-        }
-        fetchData()
-    }, [posteos])
+    const { posteos } = usePosteo()
 
     return (
         <section className="posteos">
-            <ul className="posteo">
+            <ul>
                 {posteos?.slice(0, 3).map(post => (
                     <li key={post.id}>
                         <h3> Nombre de usuario </h3>

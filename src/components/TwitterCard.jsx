@@ -3,7 +3,6 @@ import { Logout } from "./Logout"
 import { Initiation } from './Initiation'
 
 export const TwitterCard = () => {
-
     return (
         <section className="home">
             <div className="inicio">
@@ -20,8 +19,8 @@ export const TwitterCard = () => {
                 <Card userName='MalditosNerdsVX' initialIsFollowing>
                     Malditos Nerds
                 </Card>
-                <Card userName='FedeRedolfo1' initialIsFollowing>
-                    Federico Redolfo
+                <Card userName='PLMclips' initialIsFollowing>
+                    Paren La Mano Clips
                 </Card>
                 <Card userName='luquitasrodriguez' initialIsFollowing>
                     Luquitas Rodriguez

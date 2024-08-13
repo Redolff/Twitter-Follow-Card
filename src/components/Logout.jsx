@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import './Login.css'
+import '../styles/Login.css'
 import { LoginContext } from '../context/LoginProvider'
 
 export const Logout = () => {

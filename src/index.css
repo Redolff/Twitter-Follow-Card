@@ -2,4 +2,5 @@ body{
     background: #222;
     font-family: system-ui;
     display: grid;
+    text-decoration-color: white;
 }
