@@ -2,7 +2,7 @@ import { useContext, useState } from "react"
 import { LoginContext } from "../context/LoginProvider"
 
 export const useLogin = () => {
-    const {login, setLogin} = useContext(LoginContext)
+    const {login, setLogin, userLogin, setUserLogin} = useContext(LoginContext)
     const [error, setError] = useState(null)
 
     const handleSubmit = (e) => {
@@ -31,9 +31,10 @@ export const useLogin = () => {
             setError('La contraseña debe contener mas de 3 caracteres')
             return
         }
+        setUserLogin(usuario)
         setLogin(!login)
     }
 
-    return { error, handleSubmit }
+    return { error, handleSubmit, userLogin }
 
 }

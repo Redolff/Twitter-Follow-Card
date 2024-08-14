@@ -9,8 +9,16 @@ export const Initiation = () => {
         const { post } = Object.fromEntries(new window.FormData(e.target))
 
         //Agregar validaciones
-
+        if(post === ''){
+            //setError('El campo es vacio')    
+            return
+        }
+        if(post.length > 352){
+            //setError('El posteo supera los 352 caracteres permitidos')
+            return
+        }
         console.log({ post })
+        setPost(post)
     } 
 
     return (
@@ -27,7 +35,9 @@ export const Initiation = () => {
                 <textarea name="post" placeholder='¡¿Que esta pasando?!' />
                 <button type="submit"> Postear </button>
             </form>
-            <Posteo />
+            <Posteo 
+                post={post}
+            />
         </div>
     )
 }
