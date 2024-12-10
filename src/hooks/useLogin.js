@@ -8,7 +8,7 @@ export const useLogin = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         const fields = Object.fromEntries(new window.FormData(e.target))
-        const { usuario, password, repeatPassword } = fields
+        const { usuario, password } = fields
 
         // Validaciones del formulario
         if(usuario === ''){
@@ -19,15 +19,12 @@ export const useLogin = () => {
             setError('El usuario debe contener mas de 3 caracteres')
             return
         }
-        if(password === '' || repeatPassword === ''){
+        if(password === ''){
             setError('La contraseña no puede ser vacia')
             return
         }
-        if(password !== repeatPassword){
-            setError('Las contraseñas no coinciden')
-            return
-        }
-        if(password.length < 4 || repeatPassword.length < 4){
+
+        if(password.length < 4){
             setError('La contraseña debe contener mas de 3 caracteres')
             return
         }

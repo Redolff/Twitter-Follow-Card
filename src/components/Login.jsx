@@ -19,12 +19,6 @@ export const Login = () => {
                     name='password' 
                 />
 
-                <label > Repetir contraseña: </label>
-                <input 
-                    type="password" 
-                    name='repeatPassword'
-                />
-
                 <button type='submit'>Ingresar</button>
             </form>
             { error &&
